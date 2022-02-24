@@ -1,0 +1,28 @@
+#skip {
+  height: 1px;
+  left: -999px;
+  position: absolute;
+  top: auto;
+  width: 1px;
+}
+
+header nav {
+  height: 120px;
+  width: 100%;
+  background-color: transparent;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 100px;
+}
+
+ul li {
+  cursor: pointer;
+  margin-left: 12px;
+  border: 1px solid black;
+  padding: 10px 20px;
+}
