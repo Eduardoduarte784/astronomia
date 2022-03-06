@@ -18,3 +18,6 @@ html {
   font-size: 16px;
   font-family: system-ui, sans-serif;
 }
+a {
+  text-decoration: none;
+}
