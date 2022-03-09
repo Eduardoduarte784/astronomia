@@ -1,21 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-:root {
-  /* --color-primary: #333f44; */
-  --color-primary: #0b0d17;
-  --color-primary-transparent: #0b0d1780;
-  --color-secondary: #182124;
-  --color-neutral: whitesmoke;
-  --color-transparent: transparent;
-  --color-scrollbar: #aaaaaa;
-  --color-scrollbar-hover: #717171;
-  --color: #0b0d17;
-  --header-height: 60px;
-  --footer-height: 50px;
-  --shadow-key-umbra-opacity: 0.2;
-  --shadow-key-penumbra-opacity: 0.14;
-  --shadow-ambient-shadow-opacity: 0.12;
-}
-
+/* || SCROLLBAR  */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -31,12 +14,14 @@
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-scrollbar-hover);
 }
-
+/* || Header, Footer and Main Navigation   */
 body {
   font-family: 'Poppins', sans-serif;
   color: rgba(var(--color-neutral), 1);
   background-color: var(--color-primary);
-  background: #151823 url('../img/stars.png') repeat;
+  background: #1b1e29 url('../img/stars.png') repeat;
+  /* background: #191633 url('../img/stars.png') repeat;
+  background: #162233 url('../img/stars.png') repeat; */
   background-size: cover;
 }
 header nav {
@@ -60,10 +45,10 @@ nav ul {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
-ul li {
+nav ul li {
   height: 100%;
   display: flex;
   align-items: center;
@@ -71,7 +56,7 @@ ul li {
   position: relative;
 }
 
-ul li .item-list,
+nav ul li .item-list,
 .logo,
 .search {
   display: flex;
@@ -82,27 +67,27 @@ ul li .item-list,
   cursor: pointer;
 }
 
-ul li .item-list.--active {
+nav ul li .item-list.--active {
   border-radius: 0;
   bottom: 8px;
   border-bottom: 1px solid var(--color-neutral);
 }
 
-ul li .item-list:hover {
-  color: rgba(245, 245, 245, 0.7);
+nav ul li .item-list:hover {
+  color: var(--color-neutral-transparent);
   border-radius: 0;
   border-bottom: 1px solid var(--color-neutral);
 }
 
 main {
   color: var(--color-neutral);
-  padding: 0 16px;
+  padding: 0 1rem;
   min-height: calc(100% - (var(--header-height) + var(--footer-height)));
 }
 
 footer {
   font-size: 0.8rem;
-  padding: 0 16px;
+  padding: 0 1rem;
   display: flex;
   align-items: center;
   height: var(--footer-height);
