@@ -203,6 +203,14 @@ section.products .content .results .card .description .price {
     width: 45%;
   }
 }
+@media (max-width: 425px) {
+  section.products .content .filters {
+    display: none;
+  }
+  section.products .content {
+    gap: 0;
+  }
+}
 
 /* @media (max-width: 920px) {
   section.products .content {
