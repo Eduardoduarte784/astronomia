@@ -225,3 +225,84 @@ section.products .content .results .card .description .price {
     width: 100%;
   }
 }
+
+#login-screen {
+  font-family: Helvetica;
+  color: #323232;
+}
+
+#login-container {
+  background-color: #fff;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px 30px;
+  margin-top: 10vh;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#login-screen form {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+#login-screen a,
+label {
+  font-size: 0.8rem;
+}
+
+#login-screen a:hover {
+  color: 085588;
+}
+
+#login-screen label,
+input {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+#login-screen label {
+  font-weight: bold;
+}
+
+#login-screen input {
+  border: none;
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+#login-screen input:focus {
+  outline: none;
+  border-bottom: 2px solid #08558b;
+}
+
+#forgot-pass {
+  text-align: right;
+  display: block;
+}
+
+#login-screen input[type='submit'] {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #08558b;
+  cursor: pointer;
+}
+
+#login-screen input[type='submit']:hover {
+  background-color: #1c223c;
+  transition: 0.5s;
+}
+
+#register-container p {
+  margin-bottom: 10px;
+}
