@@ -1,19 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
   --color-primary: #333f44;
   --color-secondary: #182124;
   --color-neutral: whitesmoke;
-
+  --color: #0b0d17;
   --header-height: 60px;
   --footer-height: 50px;
+  --shadow-key-umbra-opacity: 0.2;
+  --shadow-key-penumbra-opacity: 0.14;
+  --shadow-ambient-shadow-opacity: 0.12;
 }
 
 body {
-  color: var(--color-neutral);
+  font-family: 'Poppins', sans-serif;
+  color: rgba(var(--color-neutral), 1);
+  background-color: var(--color-primary);
 }
 header nav {
   height: var(--header-height);
   width: 100%;
-  background-color: var(--color-primary);
+  color: black;
+  background-color: var(--color-secondary);
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, var(--shadow-key-penumbra-opacity)),
+    0 1px 10px 0 rgba(0, 0, 0, var(--shadow-ambient-shadow-opacity)),
+    0 2px 4px -1px rgba(0, 0, 0, var(--shadow-key-umbra-opacity));
 }
 
 nav ul {
@@ -26,21 +36,38 @@ nav ul {
 }
 
 ul li {
+  height: 100%;
   display: flex;
+  align-items: center;
   gap: 12px;
+  position: relative;
 }
 
-ul li div {
-  cursor: pointer;
+ul li .item-list,
+.logo,
+.search {
   display: flex;
-  border: 1px solid var(--color-secondary);
-  border-radius: 3px;
-  padding: 8px 16px;
+  border: 1px solid transparent;
+  padding: 16px;
+  color: var(--color-neutral);
+  transition: all 100ms ease-in;
+  cursor: pointer;
+}
+
+ul li .item-list.--active {
+  border-radius: 0;
+  bottom: 8px;
+  border-bottom: 1px solid var(--color-neutral);
+}
+
+ul li .item-list:hover {
+  color: rgba(245, 245, 245, 0.7);
+  border-radius: 0;
+  border-bottom: 1px solid var(--color-neutral);
 }
 
 main {
-  background-color: beige;
-  color: black;
+  color: var(--color-neutral);
   padding: 0 16px;
   min-height: calc(100% - (var(--header-height) + var(--footer-height)));
 }
