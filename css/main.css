@@ -104,24 +104,28 @@ footer .content a {
 /* || Store Page */
 main#store {
   display: flex;
-  margin: 0 auto;
   flex-direction: column;
   margin: 0px auto;
   width: 100%;
-  max-width: 80rem;
+  max-width: 100rem;
   padding: 2rem 1rem;
 }
 
 section.products .content {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-areas:
+    'filter  result result result result'
+    'filter  result result result result'
+    '......  result result result result';
 }
 section.products .content .filters {
-  min-width: 200px;
-  width: 200px;
+  min-width: 300px;
+  width: 300px;
   border-radius: 0.25rem;
   background-color: var(--color-primary);
   padding: 0.5rem 1rem;
+  grid-area: filter;
 }
 section.products .content .filters .type + .type {
   margin-top: 2rem;
@@ -157,12 +161,15 @@ section.products .content .filters .type .content .item.--active {
 }
 section.products .content .results {
   display: flex;
+  grid-area: result;
   flex-wrap: wrap;
   gap: 1rem;
 }
+
 section.products .content .results .card {
-  height: 300px;
-  width: 200px;
+  height: 330px;
+  width: 290px;
+  min-width: 290px;
   background-color: var(--color-primary);
   display: flex;
   border-radius: 4px;
@@ -170,9 +177,51 @@ section.products .content .results .card {
   align-items: center;
   justify-content: center;
   margin: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+section.products .content .results .card:hover {
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, var(--shadow-key-penumbra-opacity)),
+    0 1px 10px 0 rgba(0, 0, 0, var(--shadow-ambient-shadow-opacity)),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
 }
 
 section.products .content .results .card img {
-  height: 100px;
-  width: 100px;
+  height: 125px;
+  width: 125px;
+}
+section.products .content .results .card .description {
+  padding-top: 3rem;
+}
+section.products .content .results .card .description .price {
+  padding-top: 4px;
+  font-weight: bold;
+}
+
+@media (max-width: 1275px) {
+  section.products .content .results .card {
+    width: 45%;
+  }
+}
+
+/* @media (max-width: 920px) {
+  section.products .content {
+    gap: 1rem;
+  }
+
+  section.products .content .results .card {
+    width: 285px;
+  }
+}
+
+@media (max-width: 875px) {
+  section.products .content .results .card {
+    width: 460px;
+  }
+}  */
+
+@media (max-width: 967px) {
+  section.products .content .results .card {
+    width: 100%;
+  }
 }
