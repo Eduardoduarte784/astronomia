@@ -16,7 +16,6 @@
 }
 /* || Header, Footer and Main Navigation   */
 body {
-  font-family: 'Poppins', sans-serif;
   color: rgba(var(--color-neutral), 1);
   background-color: var(--color-primary);
   background: #1b1e29 url('../img/stars.png') repeat;
@@ -69,7 +68,6 @@ nav ul li .item-list,
 
 nav ul li .item-list.--active {
   border-radius: 0;
-  bottom: 8px;
   border-bottom: 1px solid var(--color-neutral);
 }
 
@@ -101,4 +99,80 @@ footer {
 footer .content a {
   text-decoration: none;
   color: rgba(245, 245, 245, 0.7);
+}
+
+/* || Store Page */
+main#store {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 100%;
+  max-width: 80rem;
+  padding: 2rem 1rem;
+}
+
+section.products .content {
+  display: flex;
+  gap: 3rem;
+}
+section.products .content .filters {
+  min-width: 200px;
+  width: 200px;
+  border-radius: 0.25rem;
+  background-color: var(--color-primary);
+  padding: 0.5rem 1rem;
+}
+section.products .content .filters .type + .type {
+  margin-top: 2rem;
+}
+
+section.products .content .filters .type .content {
+  display: block;
+}
+
+section.products .content .filters .type .content .item {
+  padding: 4px 8px;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+section.products .content .filters .type .content .item + .item {
+  margin-top: 4px;
+}
+
+section.products .content .filters .type .content .item:hover,
+section.products .content .filters .type .content .item:hover a {
+  background-color: #1c2033;
+  background-color: #181d33;
+  /* background-color: #282a33; */
+  color: var(--color-neutral-transparent);
+}
+
+section.products .content .filters .type .content .item.--active {
+  background-color: #1c2033;
+  background-color: #181d33;
+  /* background-color: #282a33; */
+}
+section.products .content .results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+section.products .content .results .card {
+  height: 300px;
+  width: 200px;
+  background-color: var(--color-primary);
+  display: flex;
+  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+section.products .content .results .card img {
+  height: 100px;
+  width: 100px;
 }
