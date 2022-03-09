@@ -275,6 +275,8 @@ main#store section.products .content .results .card .description .price {
   }
 }
 
+/*#region Login*/
+
 #login-screen {
   font-family: Helvetica;
   color: #323232;
@@ -296,8 +298,7 @@ main#store section.products .content .results .card .description .price {
   margin-bottom: 40px;
 }
 
-#login-screen a,
-label {
+#login-screen a {
   font-size: 0.8rem;
 }
 
@@ -306,14 +307,16 @@ label {
 }
 
 #login-screen label,
-input {
+#login-screen input {
   display: block;
   width: 100%;
   text-align: left;
 }
 
-#login-screen label {
+#login-screen label,
+#register-form-container label {
   font-weight: bold;
+  font-size: 0.8rem;
 }
 
 #login-screen input {
@@ -324,7 +327,10 @@ input {
   margin-bottom: 20px;
 }
 
-#login-screen input:focus {
+#login-screen input:focus,
+#register-form-container input:focus,
+#register-form-container select,
+#register-form-container textarea {
   outline: none;
   border-bottom: 2px solid #08558b;
 }
@@ -334,7 +340,8 @@ input {
   display: block;
 }
 
-#login-screen input[type='submit'] {
+#login-screen input[type='submit'],
+#register-form-container input[type='submit'] {
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -347,7 +354,8 @@ input {
   cursor: pointer;
 }
 
-#login-screen input[type='submit']:hover {
+#login-screen input[type='submit']:hover,
+#register-form-container input[type='submit']:hover {
   background-color: #1c223c;
   transition: 0.5s;
 }
@@ -355,3 +363,64 @@ input {
 #register-container p {
   margin-bottom: 10px;
 }
+
+#register-screen {
+  padding-top: 2.5vh;
+  padding-bottom: 2.5vh;
+}
+
+#register-form-container {
+  font-family: Helvetica;
+  color: #323232;
+  background-color: #fff;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+#register-form-container h1 {
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+#register-form-container form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#register-form-container .full-box {
+  flex: 1 1 100%;
+  position: relative;
+}
+
+#register-form-container .half-box {
+  flex: 1 1 45%;
+}
+
+#register-form-container .small-box {
+  flex: 1 1 30%;
+}
+
+#register-form-container .spacing {
+  margin-right: 2.5%;
+}
+
+#register-form-container input,
+#register-form-container select,
+#register-form-container textarea {
+  border: none;
+  border-bottom: 2px solid #323232;
+  padding: 10px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.wid-100 {
+  display: block;
+  width: 100%;
+}
+/*#endregion */
