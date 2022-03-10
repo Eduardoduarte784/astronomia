@@ -39,7 +39,7 @@ html {
   overflow-x: hidden;
 }
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: white;
 }
 ul {
@@ -50,9 +50,4 @@ ul {
 
 h3 {
   font-size: 2rem;
-  /* color: var(--color-secondary); */
-  /* color: #63503a; */
-  /* color: #63521c; */
-  /* color: #4e5163; */
-  /* color: #282a33; */
 }

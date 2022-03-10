@@ -18,9 +18,7 @@
 body {
   color: rgba(var(--color-neutral), 1);
   background-color: var(--color-primary);
-  background: #1b1e29 url('../img/stars.png') repeat;
-  /* background: #191633 url('../img/stars.png') repeat;
-  background: #162233 url('../img/stars.png') repeat; */
+  background: #1b1e29 url('../img/stars.png') repeat !important;
   background-size: cover;
 }
 header nav {
@@ -278,7 +276,7 @@ main#store section.products .content .results .card .description .price {
 /*#region Login*/
 
 #login-screen {
-  font-family: Helvetica;
+  /* font-family: Helvetica; */
   color: #323232;
 }
 
@@ -338,6 +336,11 @@ main#store section.products .content .results .card .description .price {
 #forgot-pass {
   text-align: right;
   display: block;
+}
+
+.link-button {
+  color: #08558b;
+  font-weight: 600;
 }
 
 #login-screen input[type='submit'],
