@@ -281,13 +281,13 @@ main#store section.products .content .results .card .description .price {
 }
 /* #endregion */
 
-/*#region Login*/
+/*#region Forms*/
 
-#login-screen {
+#form-screen {
   color: #323232;
 }
 
-#login-container {
+#form-container {
   background-color: #fff;
   width: 400px;
   margin-left: auto;
@@ -298,33 +298,35 @@ main#store section.products .content .results .card .description .price {
   text-align: center;
 }
 
-#login-screen form {
+#form-screen form {
   margin-top: 30px;
   margin-bottom: 40px;
 }
 
-#login-screen a {
+#form-screen a {
   font-size: 0.8rem;
 }
 
-#login-screen a:hover {
+#form-screen a:hover {
   color: 085588;
 }
 
-#login-screen label,
-#login-screen input {
+#form-screen label,
+#form-screen input,
+#form-screen textarea {
   display: block;
   width: 100%;
   text-align: left;
 }
 
-#login-screen label,
+#form-screen label,
 #register-form-container label {
   font-weight: bold;
   font-size: 0.8rem;
 }
 
-#login-screen input {
+#form-screen input,
+#form-screen textarea {
   border: none;
   border-bottom: 2px solid #323232;
   padding: 10px;
@@ -332,10 +334,11 @@ main#store section.products .content .results .card .description .price {
   margin-bottom: 20px;
 }
 
-#login-screen input:focus,
+#form-screen input:focus,
+#form-screen textarea:focus,
 #register-form-container input:focus,
-#register-form-container select,
-#register-form-container textarea {
+#register-form-container select:focus,
+#register-form-container textarea:focus {
   outline: none;
   border-bottom: 2px solid #08558b;
 }
@@ -350,6 +353,7 @@ main#store section.products .content .results .card .description .price {
   font-weight: 600;
 }
 
+#form-screen input[type='submit'],
 #login-screen input[type='submit'],
 #register-form-container input[type='submit'] {
   text-align: center;
@@ -364,9 +368,27 @@ main#store section.products .content .results .card .description .price {
   cursor: pointer;
 }
 
-#login-screen input[type='submit']:hover,
+#form-screen input[type='submit']:hover,
 #register-form-container input[type='submit']:hover {
   background-color: #1c223c;
+  transition: 0.5s;
+}
+
+#form-screen input[type='reset'] {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  margin-top: 30px;
+  color: #fff;
+  background-color: #c6001b;
+  cursor: pointer;
+}
+
+#form-screen input[type='reset']:hover {
+  background-color: #70001b;
   transition: 0.5s;
 }
 
@@ -380,7 +402,6 @@ main#store section.products .content .results .card .description .price {
 }
 
 #register-form-container {
-  font-family: Helvetica;
   color: #323232;
   background-color: #fff;
   width: 700px;
@@ -396,26 +417,26 @@ main#store section.products .content .results .card .description .price {
   text-align: center;
 }
 
-#register-form-container form {
+.flex-form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-#register-form-container .full-box {
+.full-box {
   flex: 1 1 100%;
   position: relative;
 }
 
-#register-form-container .half-box {
+.half-box {
   flex: 1 1 45%;
 }
 
-#register-form-container .small-box {
+.small-box {
   flex: 1 1 30%;
 }
 
-#register-form-container .spacing {
+.spacing {
   margin-right: 2.5%;
 }
 
