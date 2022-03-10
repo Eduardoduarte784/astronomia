@@ -49,7 +49,12 @@
     <main id="register-screen">
       <div id="register-form-container">
         <h1>Faça o seu cadastro</h1>
-        <form action="proximo.html" method="get">
+        <form
+          class="flex-form"
+          id="register-form"
+          action="mailto:admin123@example.com?subject=Dados de novo cadastro realizado na plataforma"
+          method="post"
+        >
           <div class="full-box spacing">
             <label for="name">Nome</label>
             <input
@@ -223,7 +228,7 @@
             ></textarea>
           </div>
           <div class="full-box">
-            <input class="w-100" type="submit" value="Registrar" />
+            <input class="w-100" type="submit" onclick="onClickSubmit(event)" value="Registrar" />
           </div>
         </form>
       </div>
