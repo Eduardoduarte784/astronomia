@@ -105,9 +105,25 @@ footer .content a {
 /* #endregion */
 
 /* #region HOME PAGE*/
-main#home .content {
+main#home {
+  padding: 0;
+  margin: 0;
 }
 
+main#home .content {
+  margin: 4rem 0;
+}
+main#home .content section {
+  background-color: transparent;
+  text-align: center;
+  /* color: var(--color-primary); */
+}
+main#home .content section + section {
+  margin-top: 16px;
+}
+main#home .content section a {
+  color: #08558b;
+}
 /* #region || Store Page */
 
 main#store {
