@@ -42,25 +42,24 @@
           <li>
             <a class="item-list" href="./index.html"> INÍCIO </a>
             <a class="item-list" href="./news.html"> NOTÍCIAS </a>
-            <a class="item-list" href="./videos.html"> VÍDEOS </a>
             <a class="item-list" href="./about-us.html"> SOBRE NÓS </a>
             <a class="item-list" href="./store.html"> LOJA </a>
-            <a class="item-list" href="./contact-us.html"> FALE CONOSCO </a>
+            <a class="item-list --active" href="./contact-us.html"> FALE CONOSCO </a>
           </li>
           <li>
             <div class="search" id="search">
               <i class="fa fa-search"></i>
             </div>
-            <a class="item-list --active" href="./login.html"> LOGIN </a>
+            <a class="item-list" href="./login.html"> LOGIN </a>
           </li>
         </ul>
       </nav>
     </header>
     <main id="form-screen">
       <div id="form-container">
-        <h1>Login</h1>
-        <form action="proximo.html" method="get">
-          <label for="email">E-mail</label>
+        <h1>Fale conosco</h1>
+        <form class="flex-form" action="mailto:admin123@example.com" method="post">
+          <label for="email">E-mail do remetente</label>
           <input
             type="email"
             name="email"
@@ -69,22 +68,24 @@
             autocomplete="off"
             required
           />
-          <label for="password">Senha</label>
+          <label for="subject">Assunto</label>
           <input
-            type="password"
-            name="password"
-            id="password"
-            placeholder="Digite sua senha"
+            type="text"
+            name="subject"
+            id="subject"
+            placeholder="Digite o assunto"
             autocomplete="off"
             required
           />
-          <a href="#" id="forgot-pass">Esqueceu a senha?</a>
-          <input type="submit" value="Login" />
+          <label for="body">Corpo da mensagem</label>
+          <textarea id="body" name="body" placeholder="Digite o corpo da mensagem"></textarea>
+          <div class="half-box spacing">
+            <input type="submit" value="Enviar" onClick="sendContactMail()" />
+          </div>
+          <div class="half-box">
+            <input type="reset" value="Limpar" />
+          </div>
         </form>
-        <div id="register-container">
-          <p>Ainda não tem uma conta?</p>
-          <a href="./register.html">Registrar</a>
-        </div>
       </div>
     </main>
     <footer>
